@@ -24,6 +24,7 @@ var app = app || {};
 			$(this.model.get('pageId')).toggleClass('active', modelActive);
 			if(modelActive) {
 				this.$header.find('h1').text(this.model.get('title'));
+				$('title').text(this.model.get('title') + ' - 英语流利说');
 			}
 			return this;
 		}, 
