@@ -6,7 +6,8 @@ var app = app || {};
 			title: '',
 			link: '',
 			id: '',
-			active: false
+			active: false,
+			view: {}
 		}
 	});
 })();

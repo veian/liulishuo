@@ -1,6 +1,6 @@
 name: liulishuo
 markdown: redcarpet
-exclude: ["readme.md", "compass.rb", "bower.json", "sass", "config"]
+exclude: ["readme.md", "compass.rb", "bower.json", "sass", "config", "Gruntfile.js"]
 auto: true
 pygments: true
 title : liulishuo

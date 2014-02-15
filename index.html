@@ -13,22 +13,26 @@
 				<h1>排行榜</h1>
 			</header>
 			<section id="container">
-				
+				<div id="page-eventdetail" class="page page-eventdetail">a</div>
+				<div id="page-leaderboard" class="page page-leaderboard">b</div>
+				<div id="page-winner" class="page page-winner">c</div>
+				<div id="page-me" class="page page-me">d</div>
 			</section>
 			<nav id="bottom-nav"></nav>
 			<footer id="info"></footer>
 		</div>
 		<!-- 写成一行 -->
-		<script type="text/template" id="tab-template"><a href="<%- link %>" id="nav-<%- id %>"><em></em><span><%- title %></span></a></script>
-		<script type="text/template" id="eventdetail-template"></script>
-		<script type="text/template" id="leaderboard-template"></script>
-		<script type="text/template" id="winner-template"></script>
-		<script type="text/template" id="me-template"></script>
+		<script type="text/template" id="tab-template"><a href="<%- pageId %>" id="nav-<%- id %>" class="nav-item"><em></em><span><%- title %></span></a></script>
+		<script type="text/template" id="leaderboard-template">leaderboard-template</script>
 		<script src="components/zepto/zepto.js"></script>
 		<script src="components/underscore/underscore.js"></script>
 		<script src="components/backbone/backbone.js"></script>
+		
+		<script src="js/models/leaderboard.js"></script>
 		<script src="js/models/tab.js"></script>
+		<script src="js/collections/leaderboard.js"></script>
 		<script src="js/collections/tabs.js"></script>
+		<script src="js/views/leaderboard-view.js"></script>
 		<script src="js/views/tab-view.js"></script>
 		
 		<script src="js/views/app-view.js"></script>

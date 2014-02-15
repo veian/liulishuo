@@ -9,27 +9,31 @@ var app = app || {};
 		},
 		
 		initialize: function() {
-			this.$header = this.$('#header');
-			this.$container = this.$('#container');
-			this.$footer = this.$('#footer');
-			this.$nav = this.$('#bottom-nav')
+			this.$header = $('#header');
+			this.$container = $('#container');
+			this.$footer = $('#footer');
+			this.$nav = $('#bottom-nav');
 			
-			this.listenTo(app.Tabs, 'initTabs', this.initTabs);
+			this.initTabs();
 			this.listenTo(app.Tabs, 'switchTab', this.switchTab);
-			app.Tabs.trigger('initTabs');
 		},
 		
 		// 初始化 tab
 		initTabs: function() {
 			this.$nav.empty();
 			app.Tabs.each(function(tab) {
-				new app.TabView({ model: tab });
+				var view = new app.TabView({ model: tab });
+				this.$nav.append(view.el);
 			}, this);
 		},
 		
 		// 切换页面
-		switchTab: function() {
+		switchTab: function(param) {
+			var id = param[0];
 			
+			var tab = app.Tabs.get(id);
+			
+			tab.trigger('visible');
 		}
 	});
 })(Zepto);
