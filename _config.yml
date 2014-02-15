@@ -1,0 +1,13 @@
+name: liulishuo
+markdown: redcarpet
+exclude: ["readme.md", "compass.rb", "bower.json", "sass", "config"]
+auto: true
+pygments: true
+title : liulishuo
+tagline: liulishuo
+author :
+  name : veian
+  email : q.787583174@gmail.com
+  github : veian
+
+production_url : http://liulishuo.com
